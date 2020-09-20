@@ -54,6 +54,7 @@ namespace Itech.FolderInfo.App.ViewModels
             {
                 IsError = true;
                 ErrorMessage = "You need to define a path";
+                return;
             }
 
             try
