@@ -1,0 +1,28 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:Itech.FolderInfo.App.ViewModels;assembly=Itech.FolderInfo.App"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="600"
+        x:Class="Itech.FolderInfo.App.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Display folder detail"
+        Width="500"
+        Height="600">
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+  
+  <StackPanel Margin="0">
+    <TextBlock  Width="500" Name="lblError" IsVisible="{Binding IsError}" FontWeight="Medium" Foreground="Red" Text="{Binding ErrorMessage}"/>
+    <StackPanel Orientation="Vertical">
+      <StackPanel Orientation="Horizontal" Margin="0">
+        <TextBox Watermark="Path of the folder" Width="400" Name="txtPath" Text="{Binding FolderPath}"/>
+        <Button Width="100" Height="30" Command="{Binding OnClickDisplayDetail}" ClickMode="Release">Display Detail</Button>
+      </StackPanel>
+      <TextBox Width="500" Height="500" Name="txtDetail" IsReadOnly="true" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding DetailFolder}" />
+    </StackPanel>
+    
+  </StackPanel>
+  
+</Window>
