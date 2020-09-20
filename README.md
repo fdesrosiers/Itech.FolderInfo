@@ -22,6 +22,11 @@
 	Projet qui contient l'interface UI qui permet d'obtenir les informations sur un répertoire.
 	Projet .Net Core 3.1 et Avalonia comme librairie visuelle.
 
-## Compilation
+## Installation 
+1. Installer .Net Core sur Ubuntu 18.04
+	https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu
 
-## Exécution
+## Compilation et exécution
+1. Aller dans le répertoire de l'application, où se trouve le csproj, de l'application que vous voulez exécuter ( CLI ou App).
+2. Dans un terminal, exécuter la commande suivante: `dotnet restore`.
+3. Dans un terminal, exécuter la commande suivante: `dotnet run`.
