@@ -61,7 +61,7 @@ namespace Itech.FolderInfo.App.ViewModels
                 FolderDetail result = serviceFolder.GetFolderDetail(FolderPath);
                 DetailFolder = result.ToString();
             }
-            catch (ParameterServiceException ex)
+            catch (ParameterServiceException)
             {
                 IsError = true;
                 ErrorMessage = "You need to define a valid path";
